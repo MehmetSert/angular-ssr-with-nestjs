@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from "../../services/user.service";
+import {SeoService} from "../../services/seo.service";
 
 @Component({
   selector: 'app-users',
@@ -13,10 +14,12 @@ export class UsersComponent implements OnInit {
   isErr = false;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    this.seoService.updateTitle('Users - Angular SSR');
     this.getUsers();
   }
 
