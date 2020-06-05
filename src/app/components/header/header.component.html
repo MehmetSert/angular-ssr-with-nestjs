@@ -1,0 +1,20 @@
+<header>
+  <mat-toolbar color="primary">
+    <span class="toolbar-label">Angular SSR With NestJS</span>
+    <nav class="main-nav">
+      <ul class="left-menu">
+        <li class="menu-item" *ngFor="let menu of menuItems" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="menu-item-link" [routerLink]="menu.link" [title]="menu.title">{{ menu.title }}</a>
+        </li>
+      </ul>
+      <ul class="right-menu">
+        <li class="menu-item">
+          <a class="menu-item-link" href="#" target="_blank" title="Github"><img src="assets/svg/logo-github.svg" alt="Github"></a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://kodumunblogu.net/auth/mehmet-sert-11" target="_blank" title="Kodumunblogu.net"><img src="assets/svg/code.svg" alt="Kodumunblogu.net"></a>
+        </li>
+      </ul>
+    </nav>
+  </mat-toolbar>
+</header>
